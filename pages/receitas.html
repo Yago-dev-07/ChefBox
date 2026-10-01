@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas - ChefBox</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <a href="../index.html" class="logo">
+            <img src="assets/img/logo-chefbox-transparente.png" alt="Logo ChefBox">
+        </a>
+
+        <nav class="menu">
+            <a href="../index.html">Início</a>
+            <a href="receitas.html" class="menu-ativo">Receitas</a>
+            <a href="favoritos.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+
+        <a href="cadastrar_receita.html" class="cadastro-cabecalho">
+            Cadastrar
+        </a>
+    </header>
+
+    <section class="secao-intro">
+        <img src="assets/img/hero-receitas.png" alt="Imagem principal">
+        <p class="paragrafo-intro">RECEITAS</p>
+
+        <h1 class="titulo">Encontre a receita perfeita para o seu momento!</h1>
+
+        <p>
+            Explore nossa coleção de receitas, use os filtros e encontre pratos deliciosos que combinam com o que você
+            está procurando.
+        </p>
+    </section>
+
+    <aside class="filtros">
+        <form class="form-pesquisa">
+            <label for="pesquisa"><i class="fa-solid fa-magnifying-glass"></i>Pesquisar receitas</label>
+            <input type="search" id="pesquisa" name="pesquisa"
+                placeholder="Buscar receitas, ingredientes ou categorias..." maxlength="100" class="pesquisa-receita">
+
+
+        </form>
+
+        <hr>
+
+        <form class="form-filtros">
+            <h3><i class="fa-solid fa-tags"></i>Categorias</h3>
+
+            <label>
+                <input type="checkbox" value="todas" name="categoria">
+
+                Todas
+            </label>
+
+            <label>
+                <input type="checkbox" value="massas" name="categoria">
+
+                Massas
+            </label>
+
+            <label>
+                <input type="checkbox" value="carnes" name="categoria">
+
+                Carnes
+            </label>
+
+            <label>
+                <input type="checkbox" value="vegetarianas" name="categoria">
+
+                Vegetarianas
+            </label>
+
+            <label>
+                <input type="checkbox" value="sopas" name="categoria">
+
+                Sopas
+            </label>
+
+            <label>
+                <input type="checkbox" value="sobremesas" name="categoria">
+
+                Sobremesas
+            </label>
+
+            <label>
+                <input type="checkbox" value="lanches" name="categoria">
+
+                Lanches
+            </label>
+
+            <hr>
+
+            <h3><i class="fa-regular fa-clock"></i>Tempo de preparo</h3>
+
+            <label>
+                <input type="checkbox" value="minimo" name="tempo">
+
+                Até 30min
+            </label>
+
+            <label>
+                <input type="checkbox" value="baixo" name="tempo">
+
+                30min - 1h
+            </label>
+
+            <label>
+                <input type="checkbox" value="medio" name="tempo">
+
+                1h - 2h
+            </label>
+
+            <label>
+                <input type="checkbox" value="maximo" name="tempo">
+
+                Mais de 2h
+            </label>
+
+            <hr>
+
+            <h3><i class="fa-solid fa-chart-simple"></i>Dificuldade</h3>
+
+            <label>
+                <input type="checkbox" value="facil" name="dificuldade">
+
+                Fácil
+            </label>
+
+            <label>
+                <input type="checkbox" value="medio" name="dificuldade">
+
+                Médio
+            </label>
+
+            <label>
+                <input type="checkbox" value="dificil" name="dificuldade">
+
+                Difícil
+            </label>
+
+            <button type="submit" class="botao-filtro"><i class="fa-solid fa-filter"></i>Filtrar</button>
+
+        </form>
+    </aside>
+    <main class="principal">
+        <section class="secao-principal">
+            <h2>Todas as receitas</h2>
+
+            <select name="ordenacao">
+                <option value="recentes"> Mais recentes</option>
+                <option value="antigas"> Mais antigas</option>
+                <option value="avaliacao"> Maior avaliação</option>
+                <option value="menor-avaliacao"> Menor avaliação</option>
+            </select>
+
+            <a href="#" class="controle-visualizacao"><i class="fa-solid fa-grip"></i>Grade</a>
+
+            <a href="#" class="controle-visualizacao"><i class="fa-solid fa-list"></i>Lista</a>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-lasanha.png">
+
+
+                    <span class="categoria-receita">Massas</span>
+
+                    <h3>Lasanha à Bolonhesa</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>1h30min</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                        <span><i class="fa-solid fa-star"></i>4.8</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
+
+                    <span class="categoria-receita">Massas</span>
+
+                    <h3>Macarrão à Carbonara</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>30min</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                        <span><i class="fa-solid fa-star"></i>4.6</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-frango.png" alt="Frango grelhado">
+
+
+                    <span class="categoria-receita">Carnes</span>
+
+                    <h3>Frango grelhado com legumes</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>45min</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                        <span><i class="fa-solid fa-star"></i>4.7</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-sopas.png" alt="Sopa de Legumes">
+
+
+                    <span class="categoria-receita">Sopas</span>
+
+                    <h3>Sopa de legumes</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>40min</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                        <span><i class="fa-solid fa-star"></i>4.5</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-bolo.png" alt="Bolo de chocolate">
+
+
+                    <span class="categoria-receita">Sobremesas</span>
+
+                    <h3>Bolo de chocolate</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>1h</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                        <span><i class="fa-solid fa-star"></i>4.9</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-salada.png" alt="Salada de grao-de-bico">
+
+
+                    <span class="categoria-receita">Vegetarianas</span>
+
+                    <h3>Salada de grão-de-bico</h3>
+
+                    <div class="info-destaque">
+                        <span>20min</span>
+                        <span>Fácil</span>
+                        <span>4.6</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-hamburguer.png" alt="Hambúrguer caseiro">
+
+
+                    <span class="categoria-receita">Lanches</span>
+
+                    <h3>Hambúrguer caseiro</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>30min</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                        <span><i class="fa-solid fa-star"></i>4.8</span>
+                    </div>
+                </a>
+            </article>
+
+            <article class="card-receita">
+                <a href="receita.html" class="link-receita">
+                    <img src="assets/img/card-camarao.png" alt="Camarão na manteiga">
+
+
+                    <span class="categoria-receita">Carnes</span>
+
+                    <h3>Camarão na manteiga</h3>
+
+                    <div class="info-destaque">
+                        <span><i class="fa-regular fa-clock"></i>25min</span>
+                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                        <span><i class="fa-solid fa-star"></i>4.7</span>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-logo">
+                <a href="../index.html">
+                    <img src="assets/img/logo-chefbox-transparente.png" alt="Logo ChefBox">
+                </a>
+
+                <p>
+                    Receitas deliciosas para todos os momentos.
+                </p>
+            </div>
+
+            <div class="rodape-links">
+
+                <a href="../index.html">Início</a>
+                <a href="receitas.html">Receitas</a>
+                <a href="favoritos.html">Favoritos</a>
+                <a href="sobre.html">Sobre</a>
+            </div>
+
+            <div class="redes-sociais">
+
+                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+                <a href="#"><i class="fa-brands fa-github"></i>Github</a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="rodape-final">
+            <p>&copy; 2026 ChefBox. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
