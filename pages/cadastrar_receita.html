@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - ChefBox</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="../index.html" class="logo">
+            <img src="assets/img/logo-chefbox-transparente.png" alt="Logo ChefBox">
+        </a>
+
+        <nav class="menu">
+            <a href="receitas.html">Voltar para receitas</a>
+        </nav>
+    </header>
+
+    <main class="principal">
+        <section class="secao-principal">
+            <img src="assets/img/hero-cadastrar-receita.png" alt="Imagem Principal" class="imagem-principal">
+
+            <p class="paragrafo-principal">CADASTRAR RECEITA</p>
+
+            <h1 class="titulo">Cadastre uma nova receita</h1>
+
+            <p class="descricao-principal">
+                Adicione uma nova receita ao ChefBox preenchendo as informações abaixo.
+            </p>
+        </section>
+
+        <section class="secao-cadastro">
+            <form class="cadastro-receita">
+                <label for="nome-receita"><i class="fa-solid fa-utensils"></i>Nome da receita</label>
+        
+
+                <input type="text" maxlength="100" placeholder="Digite o nome da receita" name="nome-receita"
+                id="nome-receita" required>
+
+                <label for="descricao"><i class="fa-solid fa-align-left"></i>Descrição</label>
+
+
+                <textarea name="descricao" id="descricao" placeholder="Descreva brevemente a receita" required></textarea>
+
+                <label for="imagem-receita"><i class="fa-solid fa-image"></i>Imagem da receita</label>
+        
+
+                <input type="file" name="imagem-receita" id="imagem-receita" accept="image/*" required>
+
+
+                <label for="categoria"><i class="fa-solid fa-tags"></i>Categoria</label>
+
+
+                <select name="categoria" id="categoria" required>
+                    <option  value="" selected hidden>Selecione a categoria</option>
+
+                    <option value="massas">Massas</option>
+
+                    <option value="carnes">Carnes</option>
+
+                    <option value="vegetarianas">Vegetarianas</option>
+
+                    <option value="sopas">Sopas</option>
+
+                    <option value="sobremesas">Sobremesas</option>
+
+                    <option value="lanches">Lanches</option>
+                </select>
+
+
+                <label for="tempo-preparo"><i class="fa-regular fa-clock"></i>Tempo de preparo</label>
+        
+
+                <input type="text" name="tempo-preparo" id="tempo-preparo"
+                placeholder="Ex.: 1h30min" required>
+
+                <label for="dificuldade"><i class="fa-solid fa-chart-simple"></i>Dificuldade</label>
+
+
+                <select name="dificuldade" id="dificuldade" required>
+                    <option value="" disabled selected hidden>Selecione a dificuldade</option>
+
+                    <option value="facil">Fácil</option>
+
+                    <option value="medio">Médio</option>
+
+                    <option value="dificil">Difícil</option>
+                </select>
+                
+
+                <label for="rendimento"><i class="fa-solid fa-users"></i>Rendimento</label>
+        
+
+                <input type="text" placeholder="Ex.: 6 porções" name="rendimento"
+                id="rendimento" required>
+
+
+                <label for="ingredientes"><i class="fa-solid fa-basket-shopping"></i>Ingredientes</label>
+
+
+                <textarea name="ingredientes" id="ingredientes" placeholder="Digite os ingredientes da receita" required></textarea>
+
+
+                <label for="modo-preparo"><i class="fa-solid fa-list-check"></i>Modo de preparo</label>
+
+
+                <textarea name="modo-preparo" id="modo-preparo" placeholder="Descreva o passo a passo da receita" required></textarea>
+
+                <button type="submit"><i class="fa-solid fa-check"></i>Cadastrar receita</button>
+                <button type="button"><i class="fa-solid fa-xmark"></i>Cancelar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="rodape">
+
+        <div class="rodape-conteudo">
+
+            <div class="rodape-logo">
+                <a href="../index.html">
+                    <img src="assets/img/logo-chefbox-transparente.png" alt="Logo ChefBox">
+                </a>
+
+                <p>
+                    Receitas deliciosas para todos os momentos.
+                </p>
+            </div>
+
+            <div class="rodape-links">
+
+                <a href="../index.html">Início</a>
+                <a href="receitas.html">Receitas</a>
+                <a href="favoritos.html">Favoritos</a>
+                <a href="sobre.html">Sobre</a>
+            </div>
+
+            <div class="redes-sociais">
+
+                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+                <a href="#"><i class="fa-brands fa-github"></i>Github</a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="rodape-final">
+            <p>&copy; 2026 ChefBox. Todos os direitos reservados.</p>
+        </div>
+
+    </footer>
+</body>
+</html>
