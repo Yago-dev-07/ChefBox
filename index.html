@@ -7,6 +7,8 @@
     <title>ChefBox</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="pages/assets/css/style.css">
 </head>
 
 <body>
@@ -16,7 +18,7 @@
         </a>
 
         <nav class="menu">
-            <a href="index.html" class="menu-ativo">Início</a>
+            <a href="index.html">Início</a>
             <a href="pages/receitas.html">Receitas</a>
             <a href="pages/favoritos.html">Favoritos</a>
             <a href="pages/sobre.html">Sobre</a>
@@ -29,28 +31,34 @@
         <section class="secao-principal">
             <img src="pages/assets/img/hero-pagina-inicial.png" alt="Imagem Principal" class="imagem-principal">
 
-            <p class="paragrafo-principal">RECEITAS DELICIOSAS, SEM COMPLICAÇÃO</p>
+            <div class="gradiente-principal"></div>
 
-            <h1 class="titulo">Descubra, cozinhe e aproveite o melhor da culinária!</h1>
+            <div class="conteudo-principal">
+                <p class="paragrafo-principal">RECEITAS DELICIOSAS, SEM COMPLICAÇÃO</p>
 
-            <p class="descricao-principal">
-                No ChefBox você encontra receitas fáceis, rápidas e saborosas para todos os momentos. Seja para o dia a
-                dia ou para ocasiões especiais, temos a receita perfeita para você.
-            </p>
+                <h1 class="titulo">Descubra, cozinhe e <span>aproveite o melhor da culinária!</span></h1>
 
-            <form class="form-pesquisa">
-                <label for="pesquisa">Pesquisar receitas</label>
-                <input
-                    type="search"
-                    id="pesquisa"
-                    name="pesquisa"
-                    placeholder="Buscar receitas, ingredientes ou categorias..."
-                    maxlength="100"
-                    class="pesquisa-receita"
-                >
-                <button type="submit" class="botao-receitas"><i class="fa-solid fa-magnifying-glass"></i>
-                Buscar</button>
-            </form>
+                <p class="descricao-principal">
+                    No ChefBox você encontra receitas fáceis, rápidas e saborosas para todos os momentos. Seja para o dia a
+                    dia ou para ocasiões especiais, temos a receita perfeita para você.
+                </p>
+
+                <form class="form-pesquisa">
+                    <div class="campo-pesquisa">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="search"
+                            id="pesquisa"
+                            name="pesquisa"
+                            placeholder="Buscar receitas, ingredientes ou categorias..."
+                            maxlength="100"
+                            class="pesquisa-receita" aria-label="Pesquisar receitas"
+                        >
+                    </div>
+                    <button type="submit" class="botao-receitas">
+                    Buscar</button>
+                </form>  
+            </div>
         </section>
 
         <section class="receitas-destaque">
@@ -58,105 +66,164 @@
 
             <a href="pages/receitas.html" class="ver-todas">Ver todas</a>
 
-            <article class="card-receita">
-                <a href="pages/receita.html" class="link-receita">
-                    <img src="pages/assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa">
-                
+            <div class="lista-receitas">
+                <article class="card-receita">
+                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                    </button>
 
-                    <span class="categoria-receita">Massas</span>
+                    <a href="pages/receita.html" class="link-receita">
+                        
+                        <img src="pages/assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa">
 
-                    <h3>Lasanha à Bolonhesa</h3>
+                        <span class="categoria-receita">Massas</span>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>1h30min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                        <span><i class="fa-solid fa-star"></i>4.8</span>
-                    </div>
-                </a>
-            </article>
+                        <h3>Lasanha à Bolonhesa</h3>
 
-            <article class="card-receita">
-                <a href="pages/receita.html" class="link-receita">
-                    <img src="pages/assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>1h30min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                            <span><i class="fa-solid fa-star"></i>4.8</span>
+                        </div>
+                    </a>
+                </article>
 
-                    <span class="categoria-receita">Massas</span>
+                <article class="card-receita">
+                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                    </button>
 
-                    <h3>Macarrão à Carbonara</h3>
+                    <a href="pages/receita.html" class="link-receita">
+                        
+                        <img src="pages/assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>30min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                        <span><i class="fa-solid fa-star"></i>4.6</span>
-                    </div>
-                </a>
-            </article>
+                        <span class="categoria-receita">Massas</span>
 
-            <article class="card-receita">
-                <a href="pages/receita.html" class="link-receita">
-                    <img src="pages/assets/img/card-frango.png" alt="Frango grelhado">
-                
+                        <h3>Macarrão à Carbonara</h3>
 
-                    <span class="categoria-receita">Carnes</span>
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>30min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                            <span><i class="fa-solid fa-star"></i>4.6</span>
+                        </div>
+                    </a>
+                </article>
 
-                    <h3>Frango grelhado com legumes</h3>
+                <article class="card-receita">
+                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                    </button>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>45min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                        <span><i class="fa-solid fa-star"></i>4.7</span>
-                    </div>
-                </a>
-            </article>
+                    <a href="pages/receita.html" class="link-receita">
+                        
+                        <img src="pages/assets/img/card-frango.png" alt="Frango grelhado">
+                    
+                        <span class="categoria-receita">Carnes</span>
 
-            <article class="card-receita">
-                <a href="pages/receita.html" class="link-receita">
-                    <img src="pages/assets/img/card-sopas.png" alt="Sopa de Legumes">
-                
+                        <h3>Frango grelhado com legumes</h3>
 
-                    <span class="categoria-receita">Sopas</span>
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>45min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                            <span><i class="fa-solid fa-star"></i>4.7</span>
+                        </div>
+                    </a>
+                </article>
 
-                    <h3>Sopa de legumes</h3>
+                <article class="card-receita">
+                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                    </button>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>40min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                        <span><i class="fa-solid fa-star"></i>4.5</span>
-                    </div>
-                </a>
-            </article>
+                    <a href="pages/receita.html" class="link-receita">
+                        
+                        <img src="pages/assets/img/card-sopas.png" alt="Sopa de Legumes">
 
-            <article class="card-receita">
-                <a href="pages/receita.html" class="link-receita">
-                    <img src="pages/assets/img/card-bolo.png" alt="Bolo de chocolate">
-                
+                        <span class="categoria-receita">Sopas</span>
 
-                    <span class="categoria-receita">Sobremesas</span>
+                        <h3>Sopa de legumes</h3>
 
-                    <h3>Bolo de chocolate</h3>
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>40min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                            <span><i class="fa-solid fa-star"></i>4.5</span>
+                        </div>
+                    </a>
+                </article>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>1h</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                        <span><i class="fa-solid fa-star"></i>4.9</span>
-                    </div>
-                </a>
-            </article>
-        </section>
+                <article class="card-receita">
+                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
+                    <i class="fa-regular fa-heart"></i>
+                    </button>
 
-        <section class="categorias">
-            <h2><i class="fa-solid fa-table-cells-large"></i>Categorias</h2>
-            <p class="descricao-categorias">Explore por categoria</p>
-            <div class="lista-categorias">
-                <a href="#">Todas</a>
-                <a href="#">Massas</a>
-                <a href="#">Carnes</a>
-                <a href="#">Vegetarianas</a>
-                <a href="#">Sopas</a>
-                <a href="#">Sobremesas</a>
-                <a href="#">Lanches</a>
+                    <a href="pages/receita.html" class="link-receita">
+                        
+                        <img src="pages/assets/img/card-bolo.png" alt="Bolo de chocolate">
+                    
+                        <span class="categoria-receita">Sobremesas</span>
+
+                        <h3>Bolo de chocolate</h3>
+
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>1h</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                            <span><i class="fa-solid fa-star"></i>4.9</span>
+                        </div>
+                    </a>
+                </article>
             </div>
-
         </section>
+
+    <section class="categorias">
+
+        <div class="cabecalho-categorias">
+            <i class="fa-solid fa-table-cells-large"></i>
+
+            <div>
+                <h2>Categorias</h2>
+                <p class="descricao-categorias">Explore por categoria</p>
+            </div>
+        </div>
+
+        <div class="lista-categorias">
+            <a href="#">
+                <i class="fa-solid fa-utensils"></i>
+                Todas
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-bowl-food"></i>
+                Massas
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-drumstick-bite"></i>
+                Carnes
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-leaf"></i>
+                Vegetarianas
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-bowl-rice"></i>
+                Sopas
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-cake-candles"></i>
+                Sobremesas
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-burger"></i>
+                Lanches
+            </a>
+        </div>
+
+    </section>
+
     </main>
 
     <footer class="rodape">
@@ -182,11 +249,21 @@
             </div>
 
             <div class="redes-sociais">
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
-                <a href="#"><i class="fa-brands fa-github"></i>Github</a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
             </div>
 
         </div>
