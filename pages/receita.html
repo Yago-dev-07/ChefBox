@@ -7,9 +7,14 @@
     <title>Lasanha à Bolonhesa - ChefBox</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/receita.css">
 </head>
 
 <body>
+
     <header class="cabecalho">
         <a href="../index.html" class="logo">
             <img src="assets/img/logo-chefbox-transparente.png" alt="Logo ChefBox">
@@ -27,108 +32,157 @@
         </a>
     </header>
 
-    <main class="principal">
-        <section class="secao-principal">
-            <a href="receitas.html"><i class="fa-solid fa-arrow-left"></i>Voltar para receitas</a>
-            <img src="assets/img/lasanha-a-bolonhesa.png" alt="Lasanha à bolonhesa">
-            <span class="categoria-receita">Massas</span>
+    <main class="detalhes-receita">
 
-            <h2>Lasanha à Bolonhesa</h2>
+        <a href="receitas.html" class="voltar-receitas"><i class="fa-solid fa-arrow-left"></i>Voltar para receitas</a>
 
-            <div class="info-destaque">
-                <span><i class="fa-regular fa-clock"></i>1h30min</span>
-                <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+        <section class="apresentacao-receita">
+
+            <img src="assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa" class="imagem-receita">
+
+            <div class="conteudo-receita">
+
+                <span class="categoria-receita">Massas</span>
+
+                <h1>Lasanha à Bolonhesa</h1>
+
+                <div class="informacoes-receita">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                        4.8
+                    </span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        1h30min
+                    </span>
+
+                    <span>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        Médio
+                    </span>
+                </div>
+
+                <p class="descricao-receita">
+                    Uma deliciosa lasanha à bolonhesa, perfeita para reunir a
+                    família e aproveitar uma refeição especial.
+                </p>
+
+                <button type="button" class="botao-favoritar">
+                    <i class="fa-regular fa-heart"></i>
+                    Favoritar
+                </button>
+
             </div>
 
-            <p class="descricao-principal">
-                Uma deliciosa lasanha à bolonhesa, perfeita para reunir a família e aproveitar uma refeição especial.
-            </p>
-
-            <button class="botao-favoritar"><i class="fa-regular fa-heart"></i>Favoritar</button>
         </section>
 
-        <section class="ingredientes">
-            <h3><i class="fa-solid fa-basket-shopping"></i>Ingredientes</h3>
+        <section class="preparo-receita">
 
-            <label>
-                <input type="checkbox" value="massa-lasanha" name="ingredientes">
+            <div class="card-ingredientes">
+                <h2><i class="fa-solid fa-basket-shopping"></i>Ingredientes</h2>
 
-                Massa para lasanha
-            </label>
+                <label>
+                    <input type="checkbox" value="massa-lasanha" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="carne-moida" name="ingredientes">
+                    Massa para lasanha
+                </label>
 
-                Carne moída
-            </label>
+                <label>
+                    <input type="checkbox" value="carne-moida" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="molho-tomate" name="ingredientes">
+                    Carne moída
+                </label>
 
-                Molho de tomate
-            </label>
+                <label>
+                    <input type="checkbox" value="molho-tomate" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="cebola" name="ingredientes">
+                    Molho de tomate
+                </label>
 
-                Cebola
-            </label>
+                <label>
+                    <input type="checkbox" value="cebola" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="alho" name="ingredientes">
+                    Cebola
+                </label>
 
-                Alho
-            </label>
+                <label>
+                    <input type="checkbox" value="alho" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="queijo-mussarela" name="ingredientes">
+                    Alho
+                </label>
 
-                Queijo mussarela
-            </label>
+                <label>
+                    <input type="checkbox" value="queijo-mussarela" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="presunto" name="ingredientes">
+                    Queijo mussarela
+                </label>
 
-                Presunto
-            </label>
+                <label>
+                    <input type="checkbox" value="presunto" name="ingredientes">
 
-            <label>
-                <input type="checkbox" value="queijo-parmesao" name="ingredientes">
+                    Presunto
+                </label>
 
-                Queijo parmesão
-            </label>
+                <label>
+                    <input type="checkbox" value="queijo-parmesao" name="ingredientes">
+
+                    Queijo parmesão
+                </label>
+            </div>
+
+            <div class="card-preparo">
+
+                <h2><i class="fa-solid fa-list-check"></i>Modo de preparo</h2>
+
+                <ol class="lista-preparo">
+                    <li>Prepare o molho à bolonhesa.</li>
+                    <li>Cozinhe a massa conforme as instruções da embalagem.</li>
+                    <li>Monte a lasanha intercalando massa, molho, presunto e queijo.</li>
+                    <li>Finalize com queijo parmesão.</li>
+                    <li>Leve ao forno até gratinar e sirva.</li>
+                </ol>
+            </div>
         </section>
 
-        <section class="modo-preparo">
+        <section class="nutricao-receita">
 
-            <h3><i class="fa-solid fa-list-check"></i>Modo de preparo</h3>
+            <h2>
+                <i class="fa-solid fa-circle-info"></i>
+                Informações adicionais
+            </h2>
 
-            <ol class="list-preparo">
-                <li>Prepare o molho à bolonhesa.</li>
-                <li>Cozinhe a massa conforme as instruções da embalagem.</li>
-                <li>Monte a lasanha intercalando massa, molho, presunto e queijo.</li>
-                <li>Finalize com queijo parmesão.</li>
-                <li>Leve ao forno até gratinar e sirva.</li>
-            </ol>
-        </section>
+            <div class="lista-informacoes">
 
-        <section class="info-adicionais">
-            <h3><i class="fa-solid fa-circle-info"></i>Informações adicionais</h3>
+                <div class="detalhes-info">
+                    <i class="fa-regular fa-clock"></i>
 
-            <div class="detalhes-info">
-                <span><i class="fa-regular fa-clock"></i>Tempo de preparo</span>
-                <span>1h30min</span>
+                    <div>
+                        <p>Tempo de preparo</p>
+                        <strong>1h30min</strong>
+                    </div>
+                </div>
+
+                <div class="detalhes-info com-divisor">
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <div>
+                        <p>Rendimento</p>
+                        <strong>6 porções</strong>
+                    </div>
+                </div>
+
+                <div class="detalhes-info com-divisor">
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                    <div>
+                        <p>Dificuldade</p>
+                        <strong>Médio</strong>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="detalhes-info">
-                <span><i class="fa-solid fa-users"></i>Rendimento</span>
-                <span>6 porções</span>
-            </div>
-
-            <div class="detalhes-info">
-                <span><i class="fa-solid fa-chart-simple"></i>Dificuldade</span>
-                <span>Médio</span>
-            </div>
         </section>
     </main>
 
@@ -147,19 +201,27 @@
             </div>
 
             <div class="rodape-links">
-
                 <a href="../index.html">Início</a>
                 <a href="receitas.html">Receitas</a>
                 <a href="favoritos.html">Favoritos</a>
                 <a href="sobre.html">Sobre</a>
             </div>
-
             <div class="redes-sociais">
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
-                <a href="#"><i class="fa-brands fa-github"></i>Github</a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
             </div>
 
         </div>
