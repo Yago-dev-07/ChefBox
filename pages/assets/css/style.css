@@ -470,7 +470,7 @@ a {
     outline: 3px solid var(--cor-primaria);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
     .cabecalho {
         padding: 16px 30px;
         flex-wrap: wrap;

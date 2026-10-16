@@ -1,0 +1,136 @@
+.banner-favoritos {
+    min-height: 250px;
+    padding: 35px 80px;
+}
+
+.banner-favoritos .titulo {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.banner-favoritos .descricao-principal {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.banner-favoritos .form-pesquisa {
+    max-width: 650px;
+}
+
+.receitas-favoritas {
+    padding: 30px 80px;
+}
+
+.receitas-favoritas h2 {
+    font-size: 28px;
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+}
+
+.receitas-favoritas .lista-receitas {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.receitas-favoritas .link-receita {
+    position: relative;
+}
+
+.receitas-favoritas .icone-favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: white;
+    color: var(--cor-primaria);
+    font-size: 17px;
+}
+
+.receitas-favoritas .card-receita img {
+    width: 100%;
+    height: 155px;
+    object-fit: cover;
+}
+
+.receitas-favoritas .card-receita {
+    min-width: 0;
+}
+
+.receitas-favoritas .card-receita h3 {
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.receitas-favoritas .categoria-receita {
+    font-size: 12px;
+}
+
+.receitas-favoritas .info-destaque {
+    font-size: 12px;
+}
+
+@media (max-width: 1250px) {
+    .banner-favoritos {
+        padding: 30px;
+    }
+
+    .receitas-favoritas {
+        padding: 30px;
+    }
+
+    .receitas-favoritas .lista-receitas {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .banner-favoritos {
+        padding: 30px 20px;
+    }
+
+    .banner-favoritos .titulo {
+        font-size: 28px;
+    }
+
+    .receitas-favoritas {
+        padding: 25px 20px;
+    }
+
+    .receitas-favoritas .lista-receitas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-favoritos {
+        min-height: 0;
+    }
+
+    .banner-favoritos .titulo {
+        font-size: 26px;
+    }
+
+    .banner-favoritos .descricao-principal {
+        font-size: 14px;
+    }
+
+    .receitas-favoritas .lista-receitas {
+        grid-template-columns: 1fr;
+    }
+
+    .receitas-favoritas h2 {
+        font-size: 24px;
+    }
+
+    .receitas-favoritas .card-receita img {
+        height: 200px;
+    }
+}

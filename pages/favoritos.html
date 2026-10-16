@@ -6,6 +6,12 @@
     <title>Favoritos - ChefBox</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/receitas.css">
+
+    <link rel="stylesheet" href="assets/css/favoritos.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -16,7 +22,7 @@
         <nav class="menu">
             <a href="../index.html">Início</a>
             <a href="receitas.html">Receitas</a>
-            <a href="favoritos.html" class="menu-ativo">Favoritos</a>
+            <a href="favoritos.html">Favoritos</a>
             <a href="sobre.html">Sobre</a>
         </nav>
 
@@ -27,124 +33,133 @@
 
     <main class="principal">
 
-        <section class="secao-principal">
-            <img src="assets/img/hero-favoritos.png" alt="Imagem Principal" class="imagem-principal">
+        <section class="secao-principal banner-favoritos">
 
-            <p class="paragrafo-principal">FAVORITOS</p>
+            <img src="assets/img/hero-favoritos.png" alt="" class="imagem-principal">
 
-            <h1 class="titulo">Minhas receitas favoritas</h1>
+            <div class="gradiente-principal"></div>
 
-            <p class="descricao-principal">
-                Encontre aqui todas as receitas que você salvou para preparar depois.
-            </p>
+            <div class="conteudo-principal">
+                <p class="paragrafo-principal">FAVORITOS</p>
 
-            <form class="form-pesquisa">
-                <label for="pesquisa"><i class="fa-solid fa-magnifying-glass"></i>Pesquisar favoritos</label>
-                <input
-                    type="search"
-                    id="pesquisa"
-                    name="pesquisa"
-                    placeholder="Buscar nos favoritos..."
-                    maxlength="100"
-                    class="pesquisa-receita"
-                >
-                <button type="submit" class="botao-receitas"><i class="fa-solid fa-magnifying-glass"></i>Buscar</button>
-            </form>
+                <h1 class="titulo">Minhas receitas <span>favoritas</span></h1>
+
+                <p class="descricao-principal">
+                    Encontre aqui todas as receitas que você salvou para preparar depois.
+                </p>
+
+                <form class="form-pesquisa">
+                    <div class="campo-pesquisa">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input
+                            type="search"
+                            id="pesquisa"
+                            name="pesquisa"
+                            placeholder="Buscar nos favoritos..."
+                            maxlength="100"
+                            class="pesquisa-receita" aria-label="Pesquisar favoritos"
+                        >
+                    </div>
+                    <button type="submit" class="botao-receitas">
+                    Buscar</button>
+                </form>  
+            </div>
         </section>
-
         <section class="receitas-favoritas">
 
             <h2>Receitas favoritas</h2>
-
-            <article class="card-receita">
-                <a href="receita.html" class="link-receita">
-                    <img src="assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa">
-                
-                    <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
-
-                    <span class="categoria-receita">Massas</span>
-
-                    <h3>Lasanha à Bolonhesa</h3>
-
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>1h30min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                        <span><i class="fa-solid fa-star"></i>4.8</span>
-                    </div>
-                </a>
-            </article>
-
-            <article class="card-receita">
-                <a href="receita.html" class="link-receita">
-                    <img src="assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
-
-                    <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
-
-                    <span class="categoria-receita">Massas</span>
-
-                    <h3>Macarrão à Carbonara</h3>
-
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>30min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                        <span><i class="fa-solid fa-star"></i>4.6</span>
-                    </div>
-                </a>
-            </article>
-
-            <article class="card-receita">
-                <a href="receita.html" class="link-receita">
-                    <img src="assets/img/card-frango.png" alt="Frango grelhado">
+ 
+            <div class="lista-receitas">
+                <article class="card-receita">
+                    <a href="receita.html" class="link-receita">
+                        <img src="assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa">
                     
-                    <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
+                        <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
 
-                    <span class="categoria-receita">Carnes</span>
+                        <span class="categoria-receita">Massas</span>
 
-                    <h3>Frango grelhado com legumes</h3>
+                        <h3>Lasanha à Bolonhesa</h3>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>45min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                        <span><i class="fa-solid fa-star"></i>4.7</span>
-                    </div>
-                </a>
-            </article>
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>1h30min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                            <span><i class="fa-solid fa-star"></i>4.8</span>
+                        </div>
+                    </a>
+                </article>
 
-            <article class="card-receita">
-                <a href="receita.html" class="link-receita">
-                    <img src="assets/img/card-sopas.png" alt="Sopa de Legumes">
-                    
-                    <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
+                <article class="card-receita">
+                    <a href="receita.html" class="link-receita">
+                        <img src="assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
 
-                    <span class="categoria-receita">Sopas</span>
+                        <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
 
-                    <h3>Sopa de legumes</h3>
+                        <span class="categoria-receita">Massas</span>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>40min</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                        <span><i class="fa-solid fa-star"></i>4.5</span>
-                    </div>
-                </a>
-            </article>
+                        <h3>Macarrão à Carbonara</h3>
 
-            <article class="card-receita">
-                <a href="receita.html" class="link-receita">
-                    <img src="assets/img/card-bolo.png" alt="Bolo de chocolate">
-                    
-                    <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>30min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                            <span><i class="fa-solid fa-star"></i>4.6</span>
+                        </div>
+                    </a>
+                </article>
 
-                    <span class="categoria-receita">Sobremesas</span>
+                <article class="card-receita">
+                    <a href="receita.html" class="link-receita">
+                        <img src="assets/img/card-frango.png" alt="Frango grelhado">
+                        
+                        <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
 
-                    <h3>Bolo de chocolate</h3>
+                        <span class="categoria-receita">Carnes</span>
 
-                    <div class="info-destaque">
-                        <span><i class="fa-regular fa-clock"></i>1h</span>
-                        <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                        <span><i class="fa-solid fa-star"></i>4.9</span>
-                    </div>
-                </a>
-            </article>
+                        <h3>Frango grelhado com legumes</h3>
+
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>45min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                            <span><i class="fa-solid fa-star"></i>4.7</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card-receita">
+                    <a href="receita.html" class="link-receita">
+                        <img src="assets/img/card-sopas.png" alt="Sopa de Legumes">
+                        
+                        <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
+
+                        <span class="categoria-receita">Sopas</span>
+
+                        <h3>Sopa de legumes</h3>
+
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>40min</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
+                            <span><i class="fa-solid fa-star"></i>4.5</span>
+                        </div>
+                    </a>
+                </article>
+
+                <article class="card-receita">
+                    <a href="receita.html" class="link-receita">
+                        <img src="assets/img/card-bolo.png" alt="Bolo de chocolate">
+                        
+                        <span class="icone-favorito"><i class="fa-solid fa-heart"></i></span>
+
+                        <span class="categoria-receita">Sobremesas</span>
+
+                        <h3>Bolo de chocolate</h3>
+
+                        <div class="info-destaque">
+                            <span><i class="fa-regular fa-clock"></i>1h</span>
+                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
+                            <span><i class="fa-solid fa-star"></i>4.9</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
         </section>
     </main>
 
@@ -171,11 +186,21 @@
             </div>
 
             <div class="redes-sociais">
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
-                <a href="#"><i class="fa-brands fa-github"></i>Github</a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
             </div>
 
         </div>
@@ -187,5 +212,6 @@
         </div>
 
     </footer>
+    
 </body>
 </html>
