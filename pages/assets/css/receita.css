@@ -79,6 +79,13 @@
     margin: 0;
 }
 
+.acoes-receita {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 .botao-favoritar {
     display: flex;
     align-items: center;
@@ -100,6 +107,42 @@
 
 .botao-favoritar:focus {
     outline: 3px solid var(--cor-primaria);
+}
+
+.botao-editar,
+.botao-excluir {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-editar {
+    color: #3064bb;
+    border-color: #3064bb;
+}
+
+.botao-editar:hover {
+    background-color: #3064bb;
+    color: white;
+}
+
+.botao-excluir {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.botao-excluir:hover {
+    background-color: #dc3545;
+    color: white;
 }
 
 .preparo-receita {

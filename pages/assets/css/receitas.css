@@ -42,6 +42,13 @@
     padding: 15px;
 }
 
+.titulo-filtros {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0d1b32;
+    margin-bottom: 15px;
+}
+
 .resultados-receitas {
     min-width: 0;
 }
@@ -195,6 +202,12 @@
 
 .ordenacao-receitas:focus-within {
     border-color: var(--cor-primaria);
+}
+
+.rotulo-ordenacao {
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .visualizacao-receitas {
