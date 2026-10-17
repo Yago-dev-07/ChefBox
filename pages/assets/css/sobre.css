@@ -1,0 +1,296 @@
+.banner-sobre {
+    min-height: 400px;
+    padding: 45px 80px;
+}
+
+.banner-sobre .conteudo-principal {
+    max-width: 650px;
+}
+
+.banner-sobre .titulo {
+    font-size: 44px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.banner-sobre .descricao-principal {
+    max-width: 550px;
+    font-size: 17px;
+
+}
+
+.sobre-chefbox {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 80px;
+}
+
+.sobre-chefbox img {
+    width: 48%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.conteudo-sobre {
+    flex: 1;
+}
+
+.conteudo-sobre .subtitulo {
+    font-size: 34px;
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+}
+
+.conteudo-sobre .descricao-principal {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--cor-texto-secundario);
+
+}
+
+.lista-recursos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.recursos-chefbox {
+    padding: 40px 80px;
+}
+
+.recursos-chefbox .subtitulo {
+    font-size: 32px;
+    color: var(--cor-texto);
+    margin-bottom: 25px;
+}
+
+.card-encontra {
+    background-color: white;
+    border: 1px solid #dce5ed;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.card-encontra > i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 50%;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.card-encontra h3 {
+    font-size: 15px;
+    color: var(--cor-texto);
+    margin-bottom: 12px;
+}
+
+.card-encontra .descricao-principal {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--cor-texto-secundario);
+}
+
+.proposta {
+    position: relative;
+    min-height: 280px;
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.proposta .conteudo-principal {
+    max-width: 600px;
+}
+
+.proposta h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.proposta p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.chamada-final {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    padding: 45px 20px;
+}
+
+.chamada-final h2 {
+    max-width: 450px;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--cor-texto);
+}
+
+.chamada-final .descricao-principal {
+    max-width: 600px;
+    margin-bottom: 0;
+    font-size: 15px;
+    color: var(--cor-texto-secundario);
+}
+
+.botao-explorar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.botao-explorar > i {
+    padding-left: 8px;
+}
+
+.botao-explorar:hover {
+    background-color: #e8630b;
+}
+
+.botao-explorar:focus {
+    outline: 3px solid var(--cor-primaria);
+}
+
+@media (max-width: 1250px) {
+    .banner-sobre {
+        padding: 40px 30px;
+    }
+
+    .sobre-chefbox {
+        padding: 35px 30px;
+        gap: 30px;
+    }
+
+    .recursos-chefbox {
+        padding: 35px 30px;
+    }
+
+    .lista-recursos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .proposta {
+        padding: 40px 30px;
+    }
+
+    .chamada-final {
+        padding: 35px 30px;
+    }
+}
+
+@media (max-width: 700px) {
+    .banner-sobre {
+        min-height: 0;
+        padding: 35px 20px;
+    }
+
+    .banner-sobre .titulo {
+        font-size: 32px;
+    }
+
+    .banner-sobre .descricao-principal {
+        font-size: 15px;
+    }
+
+    .sobre-chefbox {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .sobre-chefbox img {
+        width: 100%;
+        height: 260px;
+    }
+
+    .conteudo-sobre .subtitulo {
+        font-size: 28px;
+    }
+
+    .conteudo-sobre .descricao-principal {
+        font-size: 15px;
+    }
+
+    .recursos-chefbox {
+        padding: 30px 20px;
+    }
+
+    .recursos-chefbox .subtitulo {
+        font-size: 26px;
+    }
+
+    .lista-recursos {
+        gap: 15px;
+    }
+
+    .card-encontra {
+        padding: 20px;
+    }
+
+    .proposta {
+        padding: 35px 20px;
+    }
+
+    .proposta h2 {
+        font-size: 28px;
+    }
+
+    .chamada-final {
+        padding: 35px 20px;
+    }
+
+    .chamada-final h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-sobre .titulo {
+        font-size: 28px;
+    }
+
+    .sobre-chefbox img {
+        height: 210px;
+    }
+
+    .conteudo-sobre .subtitulo {
+        font-size: 25px;
+    }
+
+    .recursos-chefbox .subtitulo {
+        font-size: 24px;
+    }
+
+    .lista-recursos {
+        grid-template-columns: 1fr;
+    }
+
+    .proposta h2 {
+        font-size: 25px;
+    }
+    
+    .chamada-final h2 {
+        font-size: 25px;
+    }
+}
