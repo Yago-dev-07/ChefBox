@@ -1,0 +1,349 @@
+.banner-cadastro {
+    min-height: 180px;
+    height: auto;
+    padding: 25px 80px;
+}
+
+.banner-cadastro .gradiente-principal {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.9) 35%,
+        rgba(255, 255, 255, 0.5) 60%,
+        rgba(255, 255, 255, 0) 85%
+    );
+}
+
+.banner-cadastro .paragrafo-principal {
+    margin-bottom: 10px;
+    color: #506b91;
+}
+
+.banner-cadastro .titulo {
+    font-size: 36px;
+    margin-bottom: 8px;
+    color: var(--cor-texto);
+}
+
+.banner-cadastro .descricao-principal {
+    max-width: 580px;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: #334b6e;
+}
+
+.voltar-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.2s;
+}
+
+.voltar-cabecalho:hover {
+    color: var(--cor-primaria);
+}
+
+.secao-cadastro {
+    padding: 30px 80px;
+}
+
+.cadastro-receita {
+    min-width: 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #dce5ed;
+    border-radius: 12px;
+}
+
+.linha-principal-cadastro, .linha-preparo-cadastro {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    min-width: 0;
+    width: 100%;
+}
+
+.grupo-dados-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.linha-informacoes-cadastro {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    min-width: 0;
+    width: 100%;
+}
+
+.campo-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.campo-cadastro label, .titulo-campo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.campo-cadastro label i, .titulo-campo i {
+    font-size: 20px;
+}
+
+.campo-cadastro input, .campo-cadastro textarea, .campo-cadastro select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dce5ed;
+    border-radius: 8px;
+    background-color: white;
+    color: var(--cor-texto);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.entrada-cadastro, .campo-cadastro select {
+    height: 42px;
+}
+
+.campo-cadastro textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.linha-preparo-cadastro textarea {
+    min-height: 130px;
+}
+
+.campo-cadastro input::placeholder, .campo-cadastro textarea::placeholder {
+    color: #8ba0bc;
+}
+
+.campo-cadastro input:focus, .campo-cadastro textarea:focus, .campo-cadastro select:focus {
+    outline: 2px solid var(--cor-primaria);
+}
+
+.campo-cadastro select {
+    cursor: pointer;
+}
+
+.area-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 180px;
+    padding: 20px;
+    border: 2px dashed #b8c8d9;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    text-align: center;
+    cursor: pointer;
+}
+
+.area-upload > i {
+    font-size: 35px;
+    color: var(--cor-texto-secundario);
+}
+
+.area-upload span {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.area-upload small {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--cor-texto-secundario);
+}
+
+.input-arquivo {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    left: 0;
+}
+
+.area-upload:hover {
+    border-color: var(--cor-primaria);
+    background-color: #fff5ed;
+}
+
+.campo-cadastro:focus-within .area-upload {
+    outline: 2px solid var(--cor-primaria);
+}
+
+.campo-cadastro select:invalid {
+    color: #8ba0bc;
+}
+
+.campo-cadastro select option {
+    color: var(--cor-texto);
+}
+
+.acoes-cadastro {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.acoes-cadastro button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.botao-cadastrar {
+    background-color: #f97316;
+    color: white;
+}
+
+.botao-cadastrar:hover {
+    background-color: #ea580c;
+}
+
+.botao-cancelar {
+    background-color: #f1f5f9;
+    color: #334155;
+    border-color: #cbd5e1;
+}
+
+.botao-cancelar:hover {
+    background-color: #e2e8f0;
+}
+
+.acoes-cadastro button:focus {
+    outline: 2px solid #f97316;
+}
+
+@media (max-width: 1250px) {
+    .banner-cadastro {
+        padding: 30px 40px;
+    }
+
+    .banner-cadastro .gradiente-principal {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.98) 0%,
+            rgba(255, 255, 255, 0.95) 40%,
+            rgba(255, 255, 255, 0.8) 70%,
+            rgba(255, 255, 255, 0.25) 100%
+        );
+    }
+
+    .secao-cadastro {
+        padding: 30px 40px;
+    }
+
+    .linha-informacoes-cadastro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .banner-cadastro {
+        min-height: 0;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .banner-cadastro .gradiente-principal {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.98) 0%,
+        rgba(255, 255, 255, 0.9) 60%,
+        rgba(255, 255, 255, 0.6) 100%
+    );
+}
+
+    .banner-cadastro .titulo {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .banner-cadastro .descricao-principal {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .secao-cadastro {
+        padding: 25px 20px;
+    }
+
+    .cadastro-receita {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .linha-principal-cadastro, .linha-preparo-cadastro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    } 
+
+    .linha-informacoes-cadastro {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .banner-cadastro {
+        padding: 30px 15px;
+    }
+
+    .banner-cadastro .titulo {
+        font-size: 24px;
+    }
+
+    .secao-cadastro {
+        padding: 20px 15px;
+    }
+
+    .cadastro-receita {
+        padding: 15px;
+    }
+
+    .linha-informacoes-cadastro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .acoes-cadastro {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .acoes-cadastro button {
+        width: 100%;
+    }
+}

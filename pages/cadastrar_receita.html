@@ -6,6 +6,10 @@
     <title>Cadastro - ChefBox</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/cadastrar_receita.css">
 </head>
 <body>
     <header class="cabecalho">
@@ -14,103 +18,185 @@
         </a>
 
         <nav class="menu">
-            <a href="receitas.html">Voltar para receitas</a>
+            <a href="receitas.html" class="voltar-cabecalho">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar para receitas
+            </a>
         </nav>
     </header>
 
     <main class="principal">
-        <section class="secao-principal">
-            <img src="assets/img/hero-cadastrar-receita.png" alt="Imagem Principal" class="imagem-principal">
+        <section class="secao-principal banner-cadastro">
+            <img src="assets/img/hero-cadastrar-receita.png" alt="" class="imagem-principal">
 
-            <p class="paragrafo-principal">CADASTRAR RECEITA</p>
 
-            <h1 class="titulo">Cadastre uma nova receita</h1>
+            <div class="gradiente-principal"></div>
 
-            <p class="descricao-principal">
-                Adicione uma nova receita ao ChefBox preenchendo as informações abaixo.
-            </p>
+            <div class="conteudo-principal">
+                <p class="paragrafo-principal">CADASTRAR RECEITA</p>
+
+                <h1 class="titulo">Cadastre uma nova receita</h1>
+
+                <p class="descricao-principal">
+                    Adicione uma nova receita ao ChefBox preenchendo as informações abaixo.
+                </p>
+            </div>
         </section>
 
         <section class="secao-cadastro">
+            
             <form class="cadastro-receita">
-                <label for="nome-receita"><i class="fa-solid fa-utensils"></i>Nome da receita</label>
-        
 
-                <input type="text" maxlength="100" placeholder="Digite o nome da receita" name="nome-receita"
-                id="nome-receita" required>
+                <div class="linha-principal-cadastro">
 
-                <label for="descricao"><i class="fa-solid fa-align-left"></i>Descrição</label>
+                    <div class="grupo-dados-cadastro">
 
+                        <div class="campo-cadastro">
+                            <label for="nome-receita">
+                                <i class="fa-solid fa-utensils"></i>
+                                Nome da receita
+                            </label>
 
-                <textarea name="descricao" id="descricao" placeholder="Descreva brevemente a receita" required></textarea>
+                            <input type="text" id="nome-receita"
+                                name="nome-receita" maxlength="100"
+                                placeholder="Digite o nome da receita" class="entrada-cadastro" required>
+                        </div>
 
-                <label for="imagem-receita"><i class="fa-solid fa-image"></i>Imagem da receita</label>
-        
+                        <div class="campo-cadastro">
+                            <label for="descricao">
+                                <i class="fa-solid fa-align-left"></i>
+                                Descrição
+                            </label>
 
-                <input type="file" name="imagem-receita" id="imagem-receita" accept="image/*" required>
+                            <textarea id="descricao" name="descricao"
+                                placeholder="Descreva brevemente a receita"
+                                required></textarea>
+                        </div>
 
+                    </div>
 
-                <label for="categoria"><i class="fa-solid fa-tags"></i>Categoria</label>
+                    <div class="campo-cadastro">
+                        <span class="titulo-campo">
+                            <i class="fa-solid fa-image"></i>
+                            Imagem da receita
+                        </span>
 
+                        <label for="imagem-receita" class="area-upload">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
 
-                <select name="categoria" id="categoria" required>
-                    <option  value="" selected hidden>Selecione a categoria</option>
+                            <span>Adicione uma imagem da receita</span>
+                            <small>Clique para selecionar uma imagem</small>
+                        </label>
+                        
+                        <input type="file"      id="imagem-receita"
+                            name="imagem-receita" 
+                            class="input-arquivo"
+                            accept="image/*" required>
+                    </div>
 
-                    <option value="massas">Massas</option>
+                </div>
 
-                    <option value="carnes">Carnes</option>
+                <div class="linha-informacoes-cadastro">
 
-                    <option value="vegetarianas">Vegetarianas</option>
+                    <div class="campo-cadastro">
+                        <label for="categoria">
+                            <i class="fa-solid fa-tags"></i>
+                            Categoria
+                        </label>
 
-                    <option value="sopas">Sopas</option>
+                        <select id="categoria" name="categoria" required>
+                            <option value="" disabled selected hidden>
+                                Selecione a categoria
+                            </option>
+                            <option value="massas">Massas</option>
+                            <option value="carnes">Carnes</option>
+                            <option value="vegetarianas">Vegetarianas</option>
+                            <option value="sopas">Sopas</option>
+                            <option value="sobremesas">Sobremesas</option>
+                            <option value="lanches">Lanches</option>
+                        </select>
+                    </div>
 
-                    <option value="sobremesas">Sobremesas</option>
+                    <div class="campo-cadastro">
+                        <label for="tempo-preparo">
+                            <i class="fa-regular fa-clock"></i>
+                            Tempo de preparo
+                        </label>
 
-                    <option value="lanches">Lanches</option>
-                </select>
+                        <input type="text" id="tempo-preparo"
+                            name="tempo-preparo" placeholder="Ex.: 1h30min" class="entrada-cadastro"
+                            required>
+                    </div>
 
+                    <div class="campo-cadastro">
+                        <label for="dificuldade">
+                            <i class="fa-solid fa-chart-simple"></i>
+                            Dificuldade
+                        </label>
 
-                <label for="tempo-preparo"><i class="fa-regular fa-clock"></i>Tempo de preparo</label>
-        
+                        <select id="dificuldade" name="dificuldade" required>
+                            <option value="" disabled selected hidden>
+                                Selecione a dificuldade
+                            </option>
+                            <option value="facil">Fácil</option>
+                            <option value="medio">Médio</option>
+                            <option value="dificil">Difícil</option>
+                        </select>
+                    </div>
 
-                <input type="text" name="tempo-preparo" id="tempo-preparo"
-                placeholder="Ex.: 1h30min" required>
+                    <div class="campo-cadastro">
+                        <label for="rendimento">
+                            <i class="fa-solid fa-users"></i>
+                            Rendimento
+                        </label>
 
-                <label for="dificuldade"><i class="fa-solid fa-chart-simple"></i>Dificuldade</label>
+                        <input type="text" id="rendimento"
+                            name="rendimento" placeholder="Ex.: 6 porções" class="entrada-cadastro"
+                            required>
+                    </div>
 
+                </div>
 
-                <select name="dificuldade" id="dificuldade" required>
-                    <option value="" disabled selected hidden>Selecione a dificuldade</option>
+                <div class="linha-preparo-cadastro">
 
-                    <option value="facil">Fácil</option>
+                    <div class="campo-cadastro">
+                        <label for="ingredientes">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            Ingredientes
+                        </label>
 
-                    <option value="medio">Médio</option>
+                        <textarea id="ingredientes" name="ingredientes"
+                            placeholder="Digite os ingredientes da receita"
+                            required></textarea>
+                    </div>
 
-                    <option value="dificil">Difícil</option>
-                </select>
-                
+                    <div class="campo-cadastro">
+                        <label for="modo-preparo">
+                            <i class="fa-solid fa-list-check"></i>
+                            Modo de preparo
+                        </label>
 
-                <label for="rendimento"><i class="fa-solid fa-users"></i>Rendimento</label>
-        
+                        <textarea id="modo-preparo" name="modo-preparo"
+                            placeholder="Descreva o passo a passo da receita"
+                            required></textarea>
+                    </div>
 
-                <input type="text" placeholder="Ex.: 6 porções" name="rendimento"
-                id="rendimento" required>
+                </div>
 
+                <div class="acoes-cadastro">
+                    <button type="submit" class="botao-cadastrar">
+                        <i class="fa-solid fa-check"></i>
+                        Cadastrar receita
+                    </button>
 
-                <label for="ingredientes"><i class="fa-solid fa-basket-shopping"></i>Ingredientes</label>
+                    <button type="reset" class="botao-cancelar">
+                        <i class="fa-solid fa-xmark"></i>
+                        Cancelar
+                    </button>
+                </div>
 
-
-                <textarea name="ingredientes" id="ingredientes" placeholder="Digite os ingredientes da receita" required></textarea>
-
-
-                <label for="modo-preparo"><i class="fa-solid fa-list-check"></i>Modo de preparo</label>
-
-
-                <textarea name="modo-preparo" id="modo-preparo" placeholder="Descreva o passo a passo da receita" required></textarea>
-
-                <button type="submit"><i class="fa-solid fa-check"></i>Cadastrar receita</button>
-                <button type="button"><i class="fa-solid fa-xmark"></i>Cancelar</button>
             </form>
+
         </section>
     </main>
 
@@ -137,11 +223,21 @@
             </div>
 
             <div class="redes-sociais">
+                <a href="#" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
 
-                <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
-                <a href="#"><i class="fa-brands fa-github"></i>Github</a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i>Facebook</a>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="#" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="#" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
             </div>
 
         </div>
