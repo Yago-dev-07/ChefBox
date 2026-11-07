@@ -79,7 +79,7 @@
     justify-content: center;
     width: 55px;
     height: 55px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-botao);
     color: white;
     border-radius: 50%;
     font-size: 25px;
@@ -151,7 +151,7 @@
     align-items: center;
     justify-content: center;
     padding: 12px 30px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-botao);
     color: white;
     border-radius: 10px;
     font-size: 15px;
@@ -164,11 +164,12 @@
 }
 
 .botao-explorar:hover {
-    background-color: #e8630b;
+    background-color: var(--cor-botao-hover);
 }
 
-.botao-explorar:focus {
-    outline: 3px solid var(--cor-primaria);
+.botao-explorar:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
 }
 
 @media (max-width: 1250px) {
