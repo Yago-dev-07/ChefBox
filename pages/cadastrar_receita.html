@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
 
     <link rel="stylesheet" href="assets/css/cadastrar_receita.css">
 </head>
+
 <body>
     <header class="cabecalho">
         <a href="../index.html" class="logo">
@@ -27,25 +29,26 @@
 
     <main class="principal">
         <section class="secao-principal banner-cadastro">
-            <img src="assets/img/hero-cadastrar-receita.png" alt="Ingredientes frescos utilizados no preparo de receitas" class="imagem-principal">
+            <img src="assets/img/hero-cadastrar-receita.png"
+                alt="Ingredientes frescos utilizados no preparo de receitas" class="imagem-principal">
 
 
             <div class="gradiente-principal"></div>
 
             <div class="conteudo-principal">
-                <p class="paragrafo-principal">CADASTRAR RECEITA</p>
+                <p class="paragrafo-principal" id="subtitulo-formulario">CADASTRAR RECEITA</p>
 
-                <h1 class="titulo">Cadastre uma nova receita</h1>
+                <h1 class="titulo" id="titulo-formulario">Cadastre uma nova receita</h1>
 
-                <p class="descricao-principal">
+                <p class="descricao-principal" id="descricao-formulario">
                     Adicione uma nova receita ao ChefBox preenchendo as informações abaixo.
                 </p>
             </div>
         </section>
 
         <section class="secao-cadastro">
-            
-            <form class="cadastro-receita">
+
+            <form id="form-cadastro" class="cadastro-receita" novalidate>
 
                 <div class="linha-principal-cadastro">
 
@@ -57,8 +60,7 @@
                                 Nome da receita
                             </label>
 
-                            <input type="text" id="nome-receita"
-                                name="nome-receita" maxlength="100"
+                            <input type="text" id="nome-receita" name="nome-receita" maxlength="100"
                                 placeholder="Digite o nome da receita" class="entrada-cadastro" required>
                         </div>
 
@@ -68,8 +70,7 @@
                                 Descrição
                             </label>
 
-                            <textarea id="descricao" name="descricao"
-                                placeholder="Descreva brevemente a receita"
+                            <textarea id="descricao" name="descricao" placeholder="Descreva brevemente a receita"
                                 required></textarea>
                         </div>
 
@@ -80,18 +81,27 @@
                             <i class="fa-solid fa-image"></i>
                             Imagem da receita
                         </span>
-
                         <label for="imagem-receita" class="area-upload">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
 
                             <span>Adicione uma imagem da receita</span>
                             <small>Clique para selecionar uma imagem</small>
+
+                            <div id="imagem-atual" class="imagem-atual" hidden>
+                                <img id="visualizacao-imagem" alt="Pré-visualização da receita">
+
+                                <div class="informacoes-imagem">
+                                    <span id="nome-arquivo"></span>
+                                    <small>Clique para trocar a imagem</small>
+                                </div>
+                            </div>
                         </label>
-                        
-                        <input type="file"      id="imagem-receita"
-                            name="imagem-receita" 
-                            class="input-arquivo"
+
+                        <input type="file" id="imagem-receita" name="imagem-receita" class="input-arquivo"
                             accept="image/*" required>
+
+                        <p id="mensagem-imagem"></p>
+
                     </div>
 
                 </div>
@@ -123,9 +133,8 @@
                             Tempo de preparo
                         </label>
 
-                        <input type="text" id="tempo-preparo"
-                            name="tempo-preparo" placeholder="Ex.: 1h30min" class="entrada-cadastro"
-                            required>
+                        <input type="text" id="tempo-preparo" name="tempo-preparo" placeholder="Ex.: 1h30min"
+                            class="entrada-cadastro" required>
                     </div>
 
                     <div class="campo-cadastro">
@@ -150,9 +159,8 @@
                             Rendimento
                         </label>
 
-                        <input type="text" id="rendimento"
-                            name="rendimento" placeholder="Ex.: 6 porções" class="entrada-cadastro"
-                            required>
+                        <input type="text" id="rendimento" name="rendimento" placeholder="Ex.: 6 porções"
+                            class="entrada-cadastro" required>
                     </div>
 
                 </div>
@@ -165,8 +173,7 @@
                             Ingredientes
                         </label>
 
-                        <textarea id="ingredientes" name="ingredientes"
-                            placeholder="Digite os ingredientes da receita"
+                        <textarea id="ingredientes" name="ingredientes" placeholder="Digite os ingredientes da receita"
                             required></textarea>
                     </div>
 
@@ -177,21 +184,17 @@
                         </label>
 
                         <textarea id="modo-preparo" name="modo-preparo"
-                            placeholder="Descreva o passo a passo da receita"
-                            required></textarea>
+                            placeholder="Descreva o passo a passo da receita" required></textarea>
                     </div>
 
                 </div>
 
+                <p id="mensagem-cadastro" role="status" aria-live="polite"></p>
+
                 <div class="acoes-cadastro">
-                    <button type="submit" class="botao-cadastrar">
+                    <button type="submit" class="botao-cadastrar" id="botao-salvar">
                         <i class="fa-solid fa-check"></i>
                         Cadastrar receita
-                    </button>
-
-                    <button type="reset" class="botao-cancelar">
-                        <i class="fa-solid fa-xmark"></i>
-                        Cancelar
                     </button>
                 </div>
 
@@ -249,5 +252,13 @@
         </div>
 
     </footer>
+
+    <script src="assets/js/dados.js"></script>
+    <script src="assets/js/armazenamento.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/config-spoonacular.js"></script>
+    <script src="assets/js/api-spoonacular.js"></script>
+    <script src="assets/js/cadastro.js"></script>
 </body>
+
 </html>
