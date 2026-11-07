@@ -39,17 +39,15 @@
 
 .receitas-favoritas .icone-favorito {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background-color: white;
-    color: var(--cor-primaria);
-    font-size: 17px;
+    top: 12px;
+    right: 12px;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 24px;
+    cursor: pointer;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
 .receitas-favoritas .card-receita img {
@@ -60,6 +58,7 @@
 
 .receitas-favoritas .card-receita {
     min-width: 0;
+    position: relative;
 }
 
 .receitas-favoritas .card-receita h3 {
@@ -74,6 +73,14 @@
 
 .receitas-favoritas .info-destaque {
     font-size: 12px;
+}
+
+.mensagem-sem-favoritos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 17px;
+    color: var(--cor-texto-secundario);
 }
 
 @media (max-width: 1250px) {
