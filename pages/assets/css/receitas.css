@@ -40,6 +40,10 @@
     border: 1px solid #e2e8f0;
     border-radius: 10px;
     padding: 15px;
+    position: sticky;
+    top: 20px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
 }
 
 .titulo-filtros {
@@ -82,8 +86,16 @@
     color: #708199;
 }
 
-.pesquisa-filtros:focus-within {
-    border-color: var(--cor-primaria);
+.pesquisa-filtros:focus-within,
+.ordenacao-receitas:focus-within {
+    border-color: #1d4ed8;
+    outline: 2px solid #1d4ed8;
+    outline-offset: 2px;
+}
+
+.pesquisa-filtros input:focus-visible,
+.ordenacao-receitas select:focus-visible {
+    outline: none;
 }
 
 .grupo-filtros {
@@ -127,7 +139,7 @@
 .checkbox-filtro {
     width: 16px;
     height: 16px;
-    accent-color: var(--cor-primaria);
+    accent-color: var(--cor-botao);
     cursor: pointer;
 }
 
@@ -138,7 +150,7 @@
     gap: 10px;
     width: 100%;
     padding: 12px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-botao);
     color: white;
     border: none;
     border-radius: 8px;
@@ -149,11 +161,12 @@
 }
 
 .botao-filtrar:hover {
-    background-color: #e8630b;
+    background-color: var(--cor-botao-hover);
 }
 
-.botao-filtrar:focus {
-    outline: 3px solid var(--cor-primaria);
+.botao-filtrar:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: 3px;
 }
 
 .cabecalho-resultados {
@@ -200,10 +213,6 @@
     cursor: pointer;
 }
 
-.ordenacao-receitas:focus-within {
-    border-color: var(--cor-primaria);
-}
-
 .rotulo-ordenacao {
     white-space: nowrap;
     font-size: 14px;
@@ -236,10 +245,103 @@
 }
 
 .visualizacao-receitas .visualizacao-selecionada {
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-botao);
     color: white;
 }
 
+.visualizacao-receitas button:focus-visible {
+    outline: 3px solid #1d4ed8;
+    outline-offset: -3px;
+}
+
+.visualizacao-receitas .visualizacao-selecionada:focus-visible {
+    outline-color: white;
+}
+
+.mensagem-sem-receitas {
+    grid-column: 1 / -1;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--cor-texto-secundario);
+    font-size: 16px;
+}
+
+.botao-limpar-filtros {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-limpar-filtros:hover {
+    background-color: #f5f5f5;
+}
+
+.data-cadastro {
+    font-size: 0.78rem;
+    color: #777;
+    margin: 12px 0 16px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.info-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.info-destaque span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.grade-receitas.visualizacao-lista {
+    grid-template-columns: 1fr;
+}
+
+.grade-receitas.visualizacao-lista .link-receita {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 8px 20px;
+    padding: 16px 55px 16px 16px;
+    align-items: start;
+}
+
+.grade-receitas.visualizacao-lista .link-receita img {
+    grid-row: span 4;
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.grade-receitas.visualizacao-lista .categoria-receita {
+    justify-self: start;
+    margin: 0;
+}
+
+.grade-receitas.visualizacao-lista .card-receita h3 {
+    min-height: 0;
+}
+
+.grade-receitas.visualizacao-lista .info-destaque {
+    margin: 0;
+}
+
+.grade-receitas.visualizacao-lista .data-cadastro {
+    margin: 0;
+    padding: 0;
+}
 
 @media (max-width: 1250px) {
     
@@ -263,6 +365,12 @@
 
     .cabecalho-resultados {
         flex-wrap: wrap;
+    }
+
+    .filtros {
+        position: static;
+        max-height: none;
+        overflow-y: visible;
     }
 }
 
@@ -292,6 +400,16 @@
     .controles-resultados {
         flex-wrap: wrap;
         gap: 10px;
+    }
+
+    .grade-receitas.visualizacao-lista .link-receita {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 6px 12px;
+        padding: 12px 45px 12px 12px;
+    }
+
+    .grade-receitas.visualizacao-lista .link-receita img {
+        height: 120px;
     }
 }
 

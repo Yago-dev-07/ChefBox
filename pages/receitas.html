@@ -32,7 +32,8 @@
     </header>
     <main class="principal">
         <section class="secao-intro">
-            <img src="assets/img/hero-receitas.png" alt="Prato de massa com ingredientes frescos" class="imagem-principal">
+            <img src="assets/img/hero-receitas.png" alt="Prato de massa com ingredientes frescos"
+                class="imagem-principal">
 
             <div class="gradiente-principal"></div>
 
@@ -56,10 +57,13 @@
                 <form class="form-filtros">
 
                     <div class="pesquisa-filtros">
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <label for="pesquisa-filtros" class="rotulo-acessivel">
+                            Pesquisar receitas
+                        </label>
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
 
                         <input type="search" id="pesquisa-filtros" name="pesquisa"
-                            placeholder="Buscar receitas, ingredientes..." aria-label="Pesquisar receitas">
+                            placeholder="Buscar receitas pelo nome...">
                     </div>
 
                     <fieldset class="grupo-filtros">
@@ -102,6 +106,26 @@
                             <input type="checkbox" name="categoria" value="lanches" class="checkbox-filtro">
                             Lanches
                         </label>
+
+                        <label>
+                            <input type="checkbox" name="categoria" value="frutos do mar" class="checkbox-filtro">
+                            Frutos do mar
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="categoria" value="saladas" class="checkbox-filtro">
+                            Saladas
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="categoria" value="café da manhã" class="checkbox-filtro">
+                            Café da manhã
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="categoria" value="outras" class="checkbox-filtro">
+                            Outras
+                        </label>
                     </fieldset>
 
                     <hr class="divisor-filtros">
@@ -131,6 +155,11 @@
                             <input type="checkbox" name="tempo" value="mais-120" class="checkbox-filtro">
                             Mais de 2h
                         </label>
+
+                        <label>
+                            <input type="checkbox" name="tempo" value="nao-informado" class="checkbox-filtro">
+                            Não informado
+                        </label>
                     </fieldset>
 
                     <hr class="divisor-filtros">
@@ -155,6 +184,11 @@
                             <input type="checkbox" name="dificuldade" value="dificil" class="checkbox-filtro">
                             Difícil
                         </label>
+
+                        <label>
+                            <input type="checkbox" name="dificuldade" value="nao-informado" class="checkbox-filtro">
+                            Não informado
+                        </label>
                     </fieldset>
 
                     <hr class="divisor-filtros">
@@ -162,6 +196,11 @@
                     <button type="button" class="botao-filtrar">
                         <i class="fa-solid fa-filter"></i>
                         Filtrar
+                    </button>
+
+                    <button type="button" class="botao-limpar-filtros">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Limpar filtros
                     </button>
 
                 </form>
@@ -172,7 +211,7 @@
 
                 <div class="cabecalho-resultados">
 
-                    <h2>Todas as receitas</h2>
+                    <h2>Todas as receitas <span id="total-receitas"></span></h2>
 
                     <div class="controles-resultados">
 
@@ -180,9 +219,9 @@
                             <label for="ordenacao" class="rotulo-ordenacao">Ordenar por:</label>
 
                             <select name="ordenacao" id="ordenacao">
+                                <option value="aleatorias" selected>Aleatórias</option>
                                 <option value="recentes">Mais recentes</option>
                                 <option value="antigas">Mais antigas</option>
-                                <option value="avaliacao">Melhor avaliadas</option>
                                 <option value="tempo">Menor tempo</option>
                             </select>
                         </div>
@@ -199,173 +238,7 @@
                     </div>
                 </div>
 
-                <div class="grade-receitas">
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa">
-
-
-                            <span class="categoria-receita">Massas</span>
-
-                            <h3>Lasanha à Bolonhesa</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>1h30min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                                <span><i class="fa-solid fa-star"></i>4.8</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
-
-                            <span class="categoria-receita">Massas</span>
-
-                            <h3>Macarrão à Carbonara</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>30min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                                <span><i class="fa-solid fa-star"></i>4.6</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-frango.png" alt="Frango grelhado">
-
-
-                            <span class="categoria-receita">Carnes</span>
-
-                            <h3>Frango grelhado com legumes</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>45min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                                <span><i class="fa-solid fa-star"></i>4.7</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-sopas.png" alt="Sopa de Legumes">
-
-
-                            <span class="categoria-receita">Sopas</span>
-
-                            <h3>Sopa de legumes</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>40min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                                <span><i class="fa-solid fa-star"></i>4.5</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-bolo.png" alt="Bolo de chocolate">
-
-
-                            <span class="categoria-receita">Sobremesas</span>
-
-                            <h3>Bolo de chocolate</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>1h</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                                <span><i class="fa-solid fa-star"></i>4.9</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-salada.png" alt="Salada de grao-de-bico">
-
-
-                            <span class="categoria-receita">Vegetarianas</span>
-
-                            <h3>Salada de grão-de-bico</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>20min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                                <span><i class="fa-solid fa-star"></i>4.6</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-hamburguer.png" alt="Hambúrguer caseiro">
-
-
-                            <span class="categoria-receita">Lanches</span>
-
-                            <h3>Hambúrguer caseiro</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>30min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                                <span><i class="fa-solid fa-star"></i>4.8</span>
-                            </div>
-                        </a>
-                    </article>
-
-                    <article class="card-receita">
-                        <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-
-                        <a href="receita.html" class="link-receita">
-                            <img src="assets/img/card-camarao.png" alt="Camarão na manteiga">
-
-
-                            <span class="categoria-receita">Carnes</span>
-
-                            <h3>Camarão na manteiga</h3>
-
-                            <div class="info-destaque">
-                                <span><i class="fa-regular fa-clock"></i>25min</span>
-                                <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                                <span><i class="fa-solid fa-star"></i>4.7</span>
-                            </div>
-                        </a>
-                    </article>
+                <div class="grade-receitas" id="grade-receitas">
                 </div>
             </section>
         </div>
@@ -420,5 +293,15 @@
         </div>
 
     </footer>
+
+    <script src="assets/js/dados.js"></script>
+    <script src="assets/js/armazenamento.js"></script>
+    <script src="assets/js/favoritos.js"></script>
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/config-spoonacular.js"></script>
+    <script src="assets/js/api-spoonacular.js"></script>
+    <script src="assets/js/listagem.js"></script>
+
 </body>
+
 </html>
