@@ -15,7 +15,7 @@
 }
 
 .voltar-receitas:hover {
-    color: var(--cor-primaria);
+    color: var(--cor-botao);
 }
 
 .apresentacao-receita {
@@ -71,10 +71,6 @@
     font-size: 20px;
 }
 
-.informacoes-receita .fa-star {
-    color: #ffa500;
-}
-
 .categoria-receita {
     margin: 0;
 }
@@ -91,7 +87,7 @@
     align-items: center;
     justify-content: center;
     gap: 12px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-botao);
     color: white;
     border: none;
     border-radius: 12px;
@@ -102,11 +98,15 @@
 }
 
 .botao-favoritar:hover {
-    background-color: #e8630b;
+    background-color: var(--cor-botao-hover);
 }
 
-.botao-favoritar:focus {
-    outline: 3px solid var(--cor-primaria);
+.botao-favoritar:has(.fa-solid) {
+    background-color: #dc3545;
+}
+
+.botao-favoritar:has(.fa-solid):hover {
+    background-color: #b91c1c;
 }
 
 .botao-editar,
@@ -186,7 +186,7 @@
 .card-ingredientes input {
     width: 22px;
     height: 22px;
-    accent-color: var(--cor-primaria);
+    accent-color: var(--cor-botao);
     cursor: pointer;
 }
 
@@ -214,7 +214,7 @@
     flex-shrink: 0;
     width: 38px;
     height: 38px;
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-botao);
     color: white;
     border-radius: 50%;
     font-size: 16px;
@@ -252,6 +252,134 @@
 .com-divisor {
     border-left: 1px solid #dce5ee;
     padding-left: 35px;
+}
+
+.receita-nao-encontrada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    min-height: 450px;
+}
+
+.receita-nao-encontrada > i {
+    font-size: 65px;
+    color: var(--cor-primaria);
+}
+
+.receita-nao-encontrada h1 {
+    font-size: 32px;
+    color: var(--cor-texto);
+}
+
+.receita-nao-encontrada p {
+    font-size: 16px;
+    color: var(--cor-texto-secundario);
+    line-height: 1.6;
+}
+
+.voltar-listagem {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--cor-botao);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.voltar-listagem:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.fundo-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.fundo-modal[hidden] {
+    display: none;
+}
+
+.modal-exclusao {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 35px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.icone-modal {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background-color: #fee2e2;
+    color: #dc2626;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+}
+
+.modal-exclusao h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+    color: #222222;
+}
+
+.modal-exclusao p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 25px;
+}
+
+.acoes-modal {
+    display: flex;
+    gap: 12px;
+}
+
+.acoes-modal button {
+    flex: 1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-cancelar-exclusao {
+    background-color: #eeeeee;
+    color: #333333;
+}
+
+.botao-cancelar-exclusao:hover {
+    background-color: #dddddd;
+}
+
+.botao-confirmar-exclusao {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.botao-confirmar-exclusao:hover {
+    background-color: #b91c1c;
 }
 
 @media (max-width: 1100px) {
@@ -335,5 +463,13 @@
 
     .detalhes-info i {
         font-size: 25px;
+    }
+
+    .modal-exclusao {
+        padding: 25px 20px;
+    }
+
+    .acoes-modal {
+        flex-direction: column;
     }
 }
