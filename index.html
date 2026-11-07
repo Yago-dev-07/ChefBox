@@ -29,7 +29,8 @@
 
     <main class="principal">
         <section class="secao-principal">
-            <img src="pages/assets/img/hero-pagina-inicial.png" alt="Prato de macarrão com tomates e manjericão" class="imagem-principal">
+            <img src="pages/assets/img/hero-pagina-inicial.png" alt="Prato de macarrão com tomates e manjericão"
+                class="imagem-principal">
 
             <div class="gradiente-principal"></div>
 
@@ -39,193 +40,106 @@
                 <h1 class="titulo">Descubra, cozinhe e <span>aproveite o melhor da culinária!</span></h1>
 
                 <p class="descricao-principal">
-                    No ChefBox você encontra receitas fáceis, rápidas e saborosas para todos os momentos. Seja para o dia a
+                    No ChefBox você encontra receitas fáceis, rápidas e saborosas para todos os momentos. Seja para o
+                    dia a
                     dia ou para ocasiões especiais, temos a receita perfeita para você.
                 </p>
 
-                <form class="form-pesquisa">
+                <label for="pesquisa" class="rotulo-pesquisa-destaque">
+                    Explore sabores e encontre sua receita ideal
+                </label>
+
+                <form class="form-pesquisa" action="pages/receitas.html" method="get">
                     <div class="campo-pesquisa">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <input
-                            type="search"
-                            id="pesquisa"
-                            name="pesquisa"
-                            placeholder="Buscar receitas, ingredientes ou categorias..."
-                            maxlength="100"
-                            class="pesquisa-receita" aria-label="Pesquisar receitas"
-                        >
+                        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                        <input type="search" id="pesquisa" name="pesquisa"
+                            placeholder="Buscar receitas, ingredientes ou categorias..." maxlength="100"
+                            class="pesquisa-receita">
                     </div>
                     <button type="submit" class="botao-receitas">
-                    Buscar</button>
-                </form>  
+                        Buscar</button>
+                </form>
             </div>
         </section>
 
         <section class="receitas-destaque">
             <h2>Receitas em destaque</h2>
 
-            <a href="pages/receitas.html" class="ver-todas">
-                Ver todas
-                <i class="fa-solid fa-arrow-right"></i>
-            </a>
-
-            <div class="lista-receitas">
-                <article class="card-receita">
-                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                    <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <a href="pages/receita.html" class="link-receita">
-                        
-                        <img src="pages/assets/img/card-lasanha.png" alt="Lasanha à Bolonhesa">
-
-                        <span class="categoria-receita">Massas</span>
-
-                        <h3>Lasanha à Bolonhesa</h3>
-
-                        <div class="info-destaque">
-                            <span><i class="fa-regular fa-clock"></i>1h30min</span>
-                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                            <span><i class="fa-solid fa-star"></i>4.8</span>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card-receita">
-                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                    <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <a href="pages/receita.html" class="link-receita">
-                        
-                        <img src="pages/assets/img/card-carbonara.png" alt="Macarrão à Carbonara">
-
-                        <span class="categoria-receita">Massas</span>
-
-                        <h3>Macarrão à Carbonara</h3>
-
-                        <div class="info-destaque">
-                            <span><i class="fa-regular fa-clock"></i>30min</span>
-                            <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                            <span><i class="fa-solid fa-star"></i>4.6</span>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card-receita">
-                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                    <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <a href="pages/receita.html" class="link-receita">
-                        
-                        <img src="pages/assets/img/card-frango.png" alt="Frango grelhado">
-                    
-                        <span class="categoria-receita">Carnes</span>
-
-                        <h3>Frango grelhado com legumes</h3>
-
-                        <div class="info-destaque">
-                            <span><i class="fa-regular fa-clock"></i>45min</span>
-                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                            <span><i class="fa-solid fa-star"></i>4.7</span>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card-receita">
-                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                    <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <a href="pages/receita.html" class="link-receita">
-                        
-                        <img src="pages/assets/img/card-sopas.png" alt="Sopa de Legumes">
-
-                        <span class="categoria-receita">Sopas</span>
-
-                        <h3>Sopa de legumes</h3>
-
-                        <div class="info-destaque">
-                            <span><i class="fa-regular fa-clock"></i>40min</span>
-                            <span><i class="fa-solid fa-chart-simple"></i>Fácil</span>
-                            <span><i class="fa-solid fa-star"></i>4.5</span>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card-receita">
-                    <button type="button" class="botao-favorito" aria-label="Adicionar aos favoritos">
-                    <i class="fa-regular fa-heart"></i>
-                    </button>
-
-                    <a href="pages/receita.html" class="link-receita">
-                        
-                        <img src="pages/assets/img/card-bolo.png" alt="Bolo de chocolate">
-                    
-                        <span class="categoria-receita">Sobremesas</span>
-
-                        <h3>Bolo de chocolate</h3>
-
-                        <div class="info-destaque">
-                            <span><i class="fa-regular fa-clock"></i>1h</span>
-                            <span><i class="fa-solid fa-chart-simple"></i>Médio</span>
-                            <span><i class="fa-solid fa-star"></i>4.9</span>
-                        </div>
-                    </a>
-                </article>
+            <div class="lista-receitas" id="lista-destaque">
+                <p>Carregando receitas...</p>
             </div>
         </section>
 
-    <section class="categorias">
+        <section class="categorias">
 
-        <div class="cabecalho-categorias">
-            <i class="fa-solid fa-table-cells-large"></i>
+            <div class="cabecalho-categorias">
+                <i class="fa-solid fa-table-cells-large"></i>
 
-            <div>
-                <h2>Categorias</h2>
-                <p class="descricao-categorias">Explore por categoria</p>
+                <div>
+                    <h2>Categorias</h2>
+                    <p class="descricao-categorias">Explore por categoria</p>
+                </div>
             </div>
-        </div>
 
-        <div class="lista-categorias">
-            <a href="#">
-                <i class="fa-solid fa-utensils"></i>
-                Todas
-            </a>
+            <div class="lista-categorias">
+                <a href="pages/receitas.html" class="categoria-todas">
+                    <i class="fa-solid fa-utensils"></i>
+                    Todas
+                </a>
 
-            <a href="#">
-                <i class="fa-solid fa-bowl-food"></i>
-                Massas
-            </a>
+                <a href="pages/receitas.html?categoria=massas" class="categoria-massas">
+                    <i class="fa-solid fa-bowl-food"></i>
+                    Massas
+                </a>
 
-            <a href="#">
-                <i class="fa-solid fa-drumstick-bite"></i>
-                Carnes
-            </a>
+                <a href="pages/receitas.html?categoria=carnes" class="categoria-carnes">
+                    <i class="fa-solid fa-drumstick-bite"></i>
+                    Carnes
+                </a>
 
-            <a href="#">
-                <i class="fa-solid fa-leaf"></i>
-                Vegetarianas
-            </a>
+                <a href="pages/receitas.html?categoria=vegetarianas" class="categoria-vegetarianas">
+                    <i class="fa-solid fa-leaf"></i>
+                    Vegetarianas
+                </a>
 
-            <a href="#">
-                <i class="fa-solid fa-bowl-rice"></i>
-                Sopas
-            </a>
+                <a href="pages/receitas.html?categoria=sopas" class="categoria-sopas">
+                    <i class="fa-solid fa-bowl-rice"></i>
+                    Sopas
+                </a>
 
-            <a href="#">
-                <i class="fa-solid fa-cake-candles"></i>
-                Sobremesas
-            </a>
+                <a href="pages/receitas.html?categoria=sobremesas" class="categoria-sobremesas">
+                    <i class="fa-solid fa-cake-candles"></i>
+                    Sobremesas
+                </a>
 
-            <a href="#">
-                <i class="fa-solid fa-burger"></i>
-                Lanches
-            </a>
-        </div>
+                <a href="pages/receitas.html?categoria=lanches" class="categoria-lanches">
+                    <i class="fa-solid fa-burger"></i>
+                    Lanches
+                </a>
 
-    </section>
+                <a href="pages/receitas.html?categoria=frutos%20do%20mar" class="categoria-frutos-mar">
+                    <i class="fa-solid fa-fish"></i>
+                    Frutos do mar
+                </a>
+
+                <a href="pages/receitas.html?categoria=saladas" class="categoria-saladas">
+                    <i class="fa-solid fa-seedling"></i>
+                    Saladas
+                </a>
+
+                <a href="pages/receitas.html?categoria=caf%C3%A9%20da%20manh%C3%A3" class="categoria-cafe-manha">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    Café da manhã
+                </a>
+
+                <a href="pages/receitas.html?categoria=outras" class="categoria-outras">
+                    <i class="fa-solid fa-ellipsis"></i>
+                    Outras
+                </a>
+            </div>
+
+
+        </section>
 
     </main>
 
@@ -278,6 +192,14 @@
         </div>
 
     </footer>
+
+    <script src="pages/assets/js/dados.js"></script>
+    <script src="pages/assets/js/armazenamento.js"></script>
+    <script src="pages/assets/js/favoritos.js"></script>
+    <script src="pages/assets/js/api.js"></script>
+    <script src="pages/assets/js/config-spoonacular.js"></script>
+    <script src="pages/assets/js/api-spoonacular.js"></script>
+    <script src="pages/assets/js/home.js"></script>
 </body>
 
 </html>
